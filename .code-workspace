@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "..",
+            "name": "workspaces"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/.oryx": true
+        }
+    }
+}
