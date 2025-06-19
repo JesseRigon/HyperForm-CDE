@@ -1,22 +1,11 @@
 {
     "name": "Multi-Repo Development",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-azuretools.vscode-docker",
-                "eamodio.gitlens",
-                "github.copilot",
-                "github.vscode-pull-request-github"
-            ]
-        }
-    },
-    "remoteUser": "vscode",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/HyperForm-CDE,type=bind",
-    "workspaceFolder": "/workspaces"
+
+    "postCreateCommand": [
+        "echo 'First time container setup...'",
+    ],
+
+    "postStartCommand": [
+        "echo 'Container started, running startup commands...'",
+    ]
 }
